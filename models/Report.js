@@ -20,6 +20,7 @@ const reportSchema = new mongoose.Schema({
   dateReported: {
     type: Date,
     default: Date.now,
+    immutable: true,
   },
 });
 

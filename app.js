@@ -16,9 +16,15 @@ app.use(express.json());// simple json parsing
 // real route for report
 const reportRoutes = require('./routes/reportRoutes');
 app.use('/api/report', reportRoutes);
+
+// airoute
+const aiRoutes = require("./routes/aiRoutes"); 
+app.use("/api/ai", aiRoutes);
+
+
 // test route for now 
 app.use('/',(req,res)=>{
-    res.send("i am on  / route dand backend is working")
+    res.send("i am on  / route and backend is working")
 })
 
 
